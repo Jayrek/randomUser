@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:http/http.dart' as http;
+
 import 'failure_exception.dart';
 
 class ApiProvider {
@@ -12,7 +14,8 @@ class ApiProvider {
     var responseJson;
 
     try {
-      final response = await http.get(_baseUrl + url);
+      var _url = Uri.parse('$_baseUrl$url');
+      final response = await http.get(_url);
       responseJson = _response(response);
     } on SocketException {
       throw DataApiException('No internet connection.');
