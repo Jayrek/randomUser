@@ -38,7 +38,7 @@ class ApiProvider {
       case 500:
       default:
         throw DataApiException(
-            'Error occured while communication with server with status code ${response.statusCode}');
+            'Error occurred while communication with server with status code ${response.statusCode}');
     }
   }
 }

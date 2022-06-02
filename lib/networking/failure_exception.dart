@@ -6,7 +6,6 @@ class FailureException implements Exception {
 
   @override
   String toString() {
-    // TODO: implement toString
     return "$_prefix $_message";
   }
 }
@@ -16,14 +15,14 @@ class DataApiException extends FailureException {
       : super(message, "Error during communication.");
 }
 
-class BadRequestException extends FailureException{
+class BadRequestException extends FailureException {
   BadRequestException([String message]) : super(message, "Bad Request");
 }
 
-class UnAuthorizedException extends FailureException{
+class UnAuthorizedException extends FailureException {
   UnAuthorizedException([String message]) : super(message, "Unauthorized");
 }
 
-class InvalidInputException extends FailureException{
+class InvalidInputException extends FailureException {
   InvalidInputException([String message]) : super(message, "Invalid input");
 }
