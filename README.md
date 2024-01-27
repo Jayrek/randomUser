@@ -1,4 +1,4 @@
-# ruserapp
+# Random User - Flutter 
 
 A flutter application consuming network call.
 
